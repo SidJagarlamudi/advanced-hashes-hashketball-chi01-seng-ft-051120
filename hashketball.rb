@@ -164,3 +164,15 @@ def team_names
  team_info[:team_name]
 end
 end
+
+ def player_numbers (input)
+  jersey_numbers = []
+  game_hash.map do |team, team_info|
+    if team_info[:team_name] == input
+team_info[:players].map do |player_stats|
+  jersey_numbers << player_stats[:number]
+end
+  end
+end
+jersey_numbers
+end
