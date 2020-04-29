@@ -150,3 +150,13 @@ team_info[:players].each do |player_stats|
   end
 end
 
+
+  def team_colors(team_name)
+  
+game_hash.map do |team, team_info|
+  if team_info[:team_name] == team_name
+return team_info[:colors]
+end
+  end
+end
+
